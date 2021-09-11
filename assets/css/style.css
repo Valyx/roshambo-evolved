@@ -73,3 +73,18 @@ a {
 	font-weight: bold;
 }
 
+.reload {
+	display: none;
+	margin-top: 2rem;
+	padding: 1rem;
+	background: green;
+	outline: none;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.result {
+	margin-top: 20px;
+	font-size: 1.2rem;
+}
