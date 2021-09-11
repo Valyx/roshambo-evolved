@@ -1,3 +1,6 @@
+/* jshint esversion: 8 */
+
+/**logic for the whole game inside this function */
 const game = () => {
     let playerScore = 0;
     let computerScore = 0;
@@ -18,11 +21,12 @@ const game = () => {
     playerOptions.forEach(option => {
         option.addEventListener('click', function () {
 
+            //function to keep track of the moves left
             const movesLeft = document.querySelector('.movesleft');
             moves++;
             movesLeft.innerText = `Moves Left: ${10-moves}`;
 
-
+            //function to randomize the computer's choices
             const choiceNumber = Math.floor(Math.random() * 5);
             const computerChoice = computerOptions[choiceNumber];
 
@@ -139,3 +143,6 @@ const game = () => {
     playGame();
 
 }
+
+/** Calling the game function*/
+game();
