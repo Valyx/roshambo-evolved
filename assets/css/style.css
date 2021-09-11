@@ -32,3 +32,10 @@ body {
 	top: 100px;
 	height: 100px;
 }
+
+.p-count,
+.c-count {
+	text-align: center;
+	font-size: 1.5rem;
+	margin-top: 1rem;
+}
