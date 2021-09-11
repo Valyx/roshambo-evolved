@@ -1,5 +1,19 @@
 /* jshint esversion: 8 */
 
+/** function for the modal box */
+
+const open = document.getElementById('open');
+const modal_container = document.getElementsByClassName('modal_container')[0]
+const close = document.getElementById('close');
+
+open.addEventListener('click', () => {
+	modal_container.classList.add('show');
+})
+
+close.addEventListener('click', () => {
+	modal_container.classList.remove('show');
+})
+
 /**logic for the whole game inside this function */
 const game = () => {
     let playerScore = 0;
