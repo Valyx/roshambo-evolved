@@ -91,6 +91,8 @@ body {
 	width: 70%;
 	max-width: 100%;
 	background-color:rgb(177, 173, 168);
+	max-height: calc(100vh - 100px);
+    overflow-y: auto;
 }
 
 .modal_container {
@@ -136,4 +138,9 @@ body {
 	border-radius: 10px;
 	background: green;
 	border: 1px solid black;
+}
+
+.modal > ul {
+	display:flex;
+	justify-content: space-around;
 }
