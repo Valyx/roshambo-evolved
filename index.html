@@ -1,76 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">           
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<title>Rock Paper Scissor Lizzard Spock</title>
 </head>
+
 <body>
 	<main class="game">
-		<header class="title"><h1>Roshambo Evolved ! - RPSLK</h1>
+		<header class="title">
+			<h1>Roshambo Evolved ! - RPSLK</h1>
 
-			<button class="modal_button", id="open">History and rules of the game</button>
+			<button class="modal_button" , id="open">History and rules of the game</button>
 
 			<div class="modal_container">
 				<div class="modal">
 					<h2>Story of the game</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta eum itaque voluptatibus dignissimos aperiam vel exercitationem, dolor neque adipisci natus ducimus facilis a ipsum voluptatum error? Esse, iure non!</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta eum itaque voluptatibus
+						dignissimos aperiam vel exercitationem, dolor neque adipisci natus ducimus facilis a ipsum
+						voluptatum error? Esse, iure non!</p>
 					<h2>Rules</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, cupiditate incidunt placeat obcaecati sapiente, non sint et assumenda necessitatibus qui, sequi ipsa vel laborum hic! Assumenda cum voluptatum necessitatibus veniam.
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, cupiditate incidunt placeat
+						obcaecati sapiente, non sint et assumenda necessitatibus qui, sequi ipsa vel laborum hic!
+						Assumenda cum voluptatum necessitatibus veniam.
 					</p>
-					<button class="modal_button", id="close">Close</button>
+					<button class="modal_button" , id="close">Close</button>
 				</div>
 		</header>
-		
+
 		<section class="score">
-			<div class="computerIcon, choice_button">
-				<i id="computer_choice_icon" class="fas fa-question"></i>
+			<div class="selected_icon">
+				<i id="player_choice_icon" class="fas fa-question"></i>
 			</div>
 			<div class="playerScore">
 				<h2>Player</h2>
 				<p class="p-count count">0</p>
-			</div>	
+			</div>
 			<div class="computerScore">
 				<h2>Computer</h2>
 				<p class="c-count count">0</p>
 			</div>
-			<div class="computerIcon, choice_button">
+			<div class="selected_icon">
 				<i id="computer_choice_icon" class="fas fa-question"></i>
 			</div>
 		</section>
-		
+
 		<div class="move">Choose your move</div>
-		
+
 		<div class="movesleft">Moves Left: 10 </div>
-		
+
 		<section class="options">
 			<button class="rock choice_buttons">
-                <i class="fas fa-hand-rock"></i>
-            </button>
+				<i class="fas fa-hand-rock"></i>
+			</button>
 			<button class="paper choice_buttons">
-                <i class="fas fa-hand-paper"></i>
-            </button>
+				<i class="fas fa-hand-paper"></i>
+			</button>
 			<button class="scissor choice_buttons">
-                <i class="fas fa-hand-scissors"></i>
-            </button>
-            <button class="lizzard choice_buttons">
-                <i class="fas fa-hand-lizard"></i>
-            </button>
-            <button class="spock choice_buttons">
-                <i class="fas fa-hand-spock"></i>
-            </button>	
+				<i class="fas fa-hand-scissors"></i>
+			</button>
+			<button class="lizzard choice_buttons">
+				<i class="fas fa-hand-lizard"></i>
+			</button>
+			<button class="spock choice_buttons">
+				<i class="fas fa-hand-spock"></i>
+			</button>
 		</section>
-		
+
 		<div class="result"></div>
-		
+
 		<button class="reload"></button>
 
 	</main>
 
 	<script src="assets/javascript/script.js"></script>
 </body>
+
 </html>

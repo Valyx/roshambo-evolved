@@ -7,11 +7,11 @@ const modal_container = document.getElementsByClassName('modal_container')[0]
 const close = document.getElementById('close');
 
 open.addEventListener('click', () => {
-	modal_container.classList.add('show');
+    modal_container.classList.add('show');
 })
 
 close.addEventListener('click', () => {
-	modal_container.classList.remove('show');
+    modal_container.classList.remove('show');
 })
 
 /**logic for the whole game inside this function */
@@ -33,8 +33,11 @@ const game = () => {
 
         /**Function to start playing game */
         playerOptions.forEach(option => {
-            option.addEventListener('click', function () {
 
+            option.addEventListener('click', function (ev) {
+
+                // function to update the player's move pannel
+                document.getElementById("player_choice_icon").className = ev.currentTarget.children[0].className
                 //function to keep track of the moves left
                 const movesLeft = document.querySelector('.movesleft');
                 moves++;
@@ -43,6 +46,11 @@ const game = () => {
                 //function to randomize the computer's choices
                 const choiceNumber = Math.floor(Math.random() * 5);
                 const computerChoice = computerOptions[choiceNumber];
+
+                //function to display pc and player's choices
+
+                document.getElementById("computer_choice_icon").className = computerChoice
+
 
                 /**Function to check who wins */
                 winner(this.firstElementChild.className, computerChoice);
@@ -54,7 +62,7 @@ const game = () => {
             })
         })
     }
-    
+
     /**Function to decide winner */
     const winner = (player, computer) => {
         const result = document.querySelector('.result');

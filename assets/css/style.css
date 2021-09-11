@@ -123,3 +123,14 @@ body {
 	pointer-events: auto;
 	opacity: 1;
 }
+
+.selected_icon {
+	font-size: xx-large;
+	padding: 0.8rem;
+	width: 60px;
+	height: 60px;
+	border-radius: 10px;
+	background: green;
+	border: 1px solid black;
+	cursor: pointer;
+}
