@@ -15,31 +15,32 @@ const game = () => {
         const spockBtn = document.querySelector('.spock');
         const playerOptions = [rockBtn, paperBtn, scissorBtn, lizzardBtn, spockBtn];
         const computerOptions = ['fas fa-hand-rock', 'fas fa-hand-paper', 'fas fa-hand-scissors', 'fas fa-hand-lizard', 'fas fa-hand-spock'];
-    }
 
-    /**Function to start playing game */
-    playerOptions.forEach(option => {
-        option.addEventListener('click', function () {
 
-            //function to keep track of the moves left
-            const movesLeft = document.querySelector('.movesleft');
-            moves++;
-            movesLeft.innerText = `Moves Left: ${10-moves}`;
+        /**Function to start playing game */
+        playerOptions.forEach(option => {
+            option.addEventListener('click', function () {
 
-            //function to randomize the computer's choices
-            const choiceNumber = Math.floor(Math.random() * 5);
-            const computerChoice = computerOptions[choiceNumber];
+                //function to keep track of the moves left
+                const movesLeft = document.querySelector('.movesleft');
+                moves++;
+                movesLeft.innerText = `Moves Left: ${10-moves}`;
 
-            /**Function to check who wins */
-            winner(this.firstElementChild.className, computerChoice);
+                //function to randomize the computer's choices
+                const choiceNumber = Math.floor(Math.random() * 5);
+                const computerChoice = computerOptions[choiceNumber];
 
-            /**Calling gameOver function after 10 moves*/
-            if (moves == 10) {
-                gameOver(playerOptions, movesLeft);
-            }
+                /**Function to check who wins */
+                winner(this.firstElementChild.className, computerChoice);
+
+                /**Calling gameOver function after 10 moves*/
+                if (moves == 10) {
+                    gameOver(playerOptions, movesLeft);
+                }
+            })
         })
-    })
-
+    }
+    
     /**Function to decide winner */
     const winner = (player, computer) => {
         const result = document.querySelector('.result');
