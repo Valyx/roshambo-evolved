@@ -135,4 +135,7 @@ const game = () => {
         })
     }
 
+    /** Calling playGame function inside game */
+    playGame();
+
 }
