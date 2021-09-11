@@ -36,5 +36,68 @@ const game = () => {
         })
     })
 
+    /**Function to decide winner */
+    const winner = (player, computer) => {
+        const result = document.querySelector('.result');
+        const playerScoreBoard = document.querySelector('.p-count');
+        const computerScoreBoard = document.querySelector('.c-count');
+        player = player.toLowerCase();
+        computer = computer.toLowerCase();
+        if (player === computer) {
+            result.textContent = 'Tie';
+        } else if (player === 'fas fa-hand-rock') {
+            if (computer === 'fas fa-hand-paper' || computer === 'fas fa-hand-spock') {
+                result.textContent = 'Computer Won';
+                computerScore++;
+                computerScoreBoard.textContent = computerScore;
+
+            } else {
+                result.textContent = 'Player Won';
+                playerScore++;
+                playerScoreBoard.textContent = playerScore;
+            }
+        } else if (player === 'fas fa-hand-scissors') {
+            if (computer === 'fas fa-hand-rock' || computer === 'fas fa-hand-spock') {
+                result.textContent = 'Computer Won';
+                computerScore++;
+                computerScoreBoard.textContent = computerScore;
+            } else {
+                result.textContent = 'Player Won';
+                playerScore++;
+                playerScoreBoard.textContent = playerScore;
+            }
+        } else if (player === 'fas fa-hand-paper') {
+            if (computer === 'fas fa-hand-scissors' || computer === 'fas fa-hand-lizard') {
+                result.textContent = 'Computer Won';
+                computerScore++;
+                computerScoreBoard.textContent = computerScore;
+            } else {
+                result.textContent = 'Player Won';
+                playerScore++;
+                playerScoreBoard.textContent = playerScore;
+            }
+        } else if (player === 'fas fa-hand-lizard') {
+            if (computer === 'fas fa-hand-scissors' || computer === 'fas fa-hand-rock') {
+                result.textContent = 'Computer Won';
+                computerScore++;
+                computerScoreBoard.textContent = computerScore;
+
+            } else {
+                result.textContent = 'Player Won';
+                playerScore++;
+                playerScoreBoard.textContent = playerScore;
+            }
+        } else if (player === 'fas fa-hand-spock') {
+            if (computer === 'fas fa-hand-lizard' || computer === 'fas fa-hand-paper') {
+                result.textContent = 'Computer Won';
+                computerScore++;
+                computerScoreBoard.textContent = computerScore;
+            } else {
+                result.textContent = 'Player Won';
+                playerScore++;
+                playerScoreBoard.textContent = playerScore;
+            }
+        }
+    }
 
 }
