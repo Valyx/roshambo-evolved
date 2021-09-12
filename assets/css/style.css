@@ -1,3 +1,4 @@
+/* deafult styling for all elements */
 body {
 	padding: 0;
 	margin: 0;
@@ -6,6 +7,7 @@ body {
 	color: rgb(255, 255, 255);
 }
 
+/* To center everything in game */
 .game {
 	display: flex;
 	flex-direction: column;
@@ -15,6 +17,7 @@ body {
 	align-items: center;
 }
 
+/* styling for the title of the game */
 .title {
 	position: absolute;
 	text-align: center;
@@ -23,6 +26,7 @@ body {
 	margin-bottom: 100px;
 }
 
+/* Score Board */
 .score {
 	display: flex;
 	width: 50vw;
@@ -37,7 +41,22 @@ body {
 	font-size: 1.5rem;
 	margin-top: 1rem;
 }
+/* style for the move display area */
+.selected_icon {
+	font-size: xx-large;
+	color: black;
+	padding: 0.8rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 10px;
+	background: green;
+	border: 1px solid black;
+}
 
+/* Styling on all five buttons */
 .options {
 	display: flex;
 	width: 50vw;
@@ -67,6 +86,8 @@ body {
 	font-weight: bold;
 }
 
+/* Reload button style */
+
 .reload {
 	display: none;
 	margin-top: 2rem;
@@ -90,9 +111,9 @@ body {
 	padding: 20px 30px;
 	width: 70%;
 	max-width: 100%;
-	background-color:rgb(177, 173, 168);
+	background-color: rgb(177, 173, 168);
 	max-height: calc(100vh - 100px);
-    overflow-y: auto;
+	overflow-y: auto;
 }
 
 .modal_container {
@@ -106,7 +127,7 @@ body {
 	left: 0;
 	opacity: 0;
 	pointer-events: none;
-	color:rgb(23, 14, 7);
+	color: rgb(23, 14, 7);
 	background-color: rgb(57, 70, 189);
 
 }
@@ -126,22 +147,8 @@ body {
 	opacity: 1;
 }
 
-.selected_icon {
-	font-size: xx-large;
-	color:black;
-	padding: 0.8rem;
+.modal>ul {
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 50px;
-	height: 50px;
-	border-radius: 10px;
-	background: green;
-	border: 1px solid black;
-}
-
-.modal > ul {
-	display:flex;
 	justify-content: space-around;
 }
 
@@ -154,9 +161,9 @@ body {
 
 footer {
 	display: flex;
-    object-position: bottom;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0px 30px;
-    align-items: center;
+	object-position: bottom;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0px 30px;
+	align-items: center;
 }
