@@ -144,3 +144,19 @@ body {
 	display:flex;
 	justify-content: space-around;
 }
+
+/* footer styling */
+
+#git_link {
+	text-decoration: none;
+	color: white;
+}
+
+footer {
+	display: flex;
+    object-position: bottom;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 30px;
+    align-items: center;
+}
