@@ -14,11 +14,12 @@
 <body>
 	<main class="game">
 		<header class="title">
+			<!--Title -->
 			<h1>Roshambo Evolved ! - RPSLK</h1>
 
 			<button class="modal_button" , id="open">History and rules of the game</button>
-
-			<div class="modal_container">
+			<!--Opens up when clicked to display extra information about the game-->
+			<section class="modal_container">
 				<div class="modal">
 					<h2>Story of the game</h2>
 					<p>Rock-Paper-Scissors (a.k.a -Roshambo) is a common two player game in which each player secretly
@@ -55,8 +56,9 @@
 					</p>
 					<button class="modal_button" , id="close">Close</button>
 				</div>
+			</section>
 		</header>
-
+		<!--Display score and curent move of player and computer -->
 		<section class="score">
 			<div class="selected_icon">
 				<i id="player_choice_icon" class="fas fa-question"></i>
@@ -75,9 +77,9 @@
 		</section>
 
 		<div class="move">Choose your move</div>
-
+		<!--Number of moves left before game ends -->
 		<div class="movesleft">Moves Left: 10 </div>
-
+		<!--Options available to player to play game -->
 		<section class="options">
 			<button class="rock choice_buttons">
 				<i class="fas fa-hand-rock"></i>
@@ -95,9 +97,9 @@
 				<i class="fas fa-hand-spock"></i>
 			</button>
 		</section>
-
+		<!--Final result of game -->
 		<div class="result"></div>
-
+		<!--Reload the game -->
 		<button class="reload"></button>
 
 	</main>
