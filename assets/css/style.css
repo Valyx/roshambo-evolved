@@ -216,6 +216,7 @@ footer {
 	.options {
 		width: 100vw;
 	}
+}
 
 @media screen and (max-width: 500px) {
 
@@ -249,3 +250,12 @@ footer {
 	.options {
 		width: 100vw;
 	}
+}
+
+@media screen and (max-width: 360px) {
+
+	.modal_button {
+		top: 160px;
+		position: relative;
+	}
+}
