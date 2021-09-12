@@ -41,6 +41,7 @@ body {
 	font-size: 1.5rem;
 	margin-top: 1rem;
 }
+
 /* style for the move display area */
 .selected_icon {
 	font-size: xx-large;
@@ -167,3 +168,53 @@ footer {
 	padding: 0px 30px;
 	align-items: center;
 }
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+	.modal {
+		border-radius: 0px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.game {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.title {
+		text-align: center;
+	}
+
+	.score {
+		margin-top: 100px;
+		width: 100vw;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+
+	.options {
+		width: 100vw;
+	}
+
+	@media screen and (max-width: 490px) {
+		.title {
+			text-align: center;
+		}
+
+		.score {
+			margin-top: 180px;
+			width: 100vw;
+		}
+
+		.options {
+			width: 100vw;
+		}
+
+		.modal_button {
+			margin-top: 20px;
+		}
