@@ -2,17 +2,17 @@
 
 /** function for the modal box */
 
-const open = document.getElementById('open');
-const modal_container = document.getElementsByClassName('modal_container')[0]
-const close = document.getElementById('close');
+const open_y = document.getElementById('open');
+const modal_container = document.getElementsByClassName('modal_container')[0];
+const close_y = document.getElementById('close');
 
-open.addEventListener('click', () => {
+open_y.addEventListener('click', () => {
     modal_container.classList.add('show');
-})
+});
 
-close.addEventListener('click', () => {
+close_y.addEventListener('click', () => {
     modal_container.classList.remove('show');
-})
+});
 
 /**logic for the whole game inside this function */
 const game = () => {
@@ -37,7 +37,7 @@ const game = () => {
             option.addEventListener('click', function (ev) {
 
                 // function to update the player's move pannel
-                document.getElementById("player_choice_icon").className = ev.currentTarget.children[0].className
+                document.getElementById("player_choice_icon").className = ev.currentTarget.children[0].className;
                 //function to keep track of the moves left
                 const movesLeft = document.querySelector('.movesleft');
                 moves++;
@@ -47,9 +47,9 @@ const game = () => {
                 const choiceNumber = Math.floor(Math.random() * 5);
                 const computerChoice = computerOptions[choiceNumber];
 
-                //function to display pc and player's choices
+                //function to display computer's choice
 
-                document.getElementById("computer_choice_icon").className = computerChoice
+                document.getElementById("computer_choice_icon").className = computerChoice;
 
 
                 /**Function to check who wins */
@@ -59,9 +59,9 @@ const game = () => {
                 if (moves == 10) {
                     gameOver(playerOptions, movesLeft);
                 }
-            })
-        })
-    }
+            });
+        });
+    };
 
     /**Function to decide winner */
     const winner = (player, computer) => {
@@ -125,7 +125,7 @@ const game = () => {
                 playerScoreBoard.textContent = playerScore;
             }
         }
-    }
+    };
 
     /**Function to run when game is over*/
     const gameOver = (playerOptions, movesLeft) => {
@@ -136,36 +136,36 @@ const game = () => {
 
         playerOptions.forEach(option => {
             option.style.display = 'none';
-        })
+        });
 
 
-        chooseMove.innerText = 'Game Over!!'
+        chooseMove.innerText = 'Game Over!!';
         movesLeft.style.display = 'none';
 
         if (playerScore > computerScore) {
             result.style.fontSize = '2rem';
-            result.innerText = 'You Won The Game'
+            result.innerText = 'You Won The Game !';
             result.style.color = '#308D46';
         } else if (playerScore < computerScore) {
             result.style.fontSize = '2rem';
-            result.innerText = 'You Lost The Game';
-            result.style.color = 'red';
+            result.innerText = 'You Lost The Game :(';
+            result.style.color = 'rgb(241 203 227)';
         } else {
             result.style.fontSize = '2rem';
             result.innerText = 'Tie';
-            result.style.color = 'grey'
+            result.style.color = '#aaf7b4';
         }
         reloadBtn.innerText = 'Restart';
-        reloadBtn.style.display = 'flex'
+        reloadBtn.style.display = 'flex';
         reloadBtn.addEventListener('click', () => {
             window.location.reload();
-        })
-    }
+        });
+    };
 
     /** Calling playGame function inside game */
     playGame();
 
-}
+};
 
 /** Calling the game function*/
 game();
